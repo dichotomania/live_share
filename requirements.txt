@@ -1,0 +1,14 @@
+requests
+beautifulsoup4
+numpy
+Django
+psycopg2-binary
+pymongo
+googlemaps
+geopy
+dnspython
+# djongo
+# pytz
+django_heroku
+line-bot-sdk
+gunicorn
