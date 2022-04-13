@@ -4,7 +4,7 @@ from linebot.models import CarouselTemplate, CarouselColumn ,PostbackTemplateAct
 import googlemaps
 from geopy.distance import geodesic
 
-gmaps=googlemaps.Client(key="AIzaSyBTbe1RWM9HOIbJT1XSrDHNmRwfy5A-Dr8")
+gmaps=googlemaps.Client(key="*")
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
 
 lottodata = {
