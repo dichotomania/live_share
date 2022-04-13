@@ -29,14 +29,14 @@ DBSERVER = "atlas"
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-LINE_CHANNEL_ACCESS_TOKEN = "HVzXr2fkdSziz+fVjitO2EGxv4YMdBMzz7RJJhU6/XHE9pQwsryegJojRufqoxVIB949WzuHbj7BCKjI9B5xTEIHuCZg77d3Gw3kJ4GP1BqQm8h0x0O7qBvtyGER3S24lDcVAgv559B5i0j1KdXo4gdB04t89/1O/w1cDnyilFU="
-LINE_CHANNEL_SECRET = "0d80842f441af4c0e205bb9ee4bb5ccf"
+LINE_CHANNEL_ACCESS_TOKEN = "*"
+LINE_CHANNEL_SECRET = "*"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l(990!#00i-fl0y6gz3$t=i_nd9l^&2i!9jcbxk*pek)f2kurt'
+SECRET_KEY = '*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -102,7 +102,7 @@ WSGI_APPLICATION = 'liveshare.wsgi.application'
 #         'ENGINE': 'django.db.backends.postgresql',  # PostgreSQL
 #         'NAME': 'liveshare',  # 資料庫名稱
 #         'USER': 'postgres',  # 資料庫帳號
-#         'PASSWORD': '123456',  # 資料庫密碼
+#         'PASSWORD': '*',  # 資料庫密碼
 #         'HOST': 'localhost',  # Server(伺服器)位址
 #         'PORT': '5432'  # PostgreSQL Port號
 #     }
@@ -113,7 +113,7 @@ WSGI_APPLICATION = 'liveshare.wsgi.application'
 #         "CLIENT": {
 #             # "host": "mongodb://root:123456@localhost",
 #             "username": "root",
-#             "password": "123456",
+#             "password": "*",
 #             "name": "liveshare",
 #         },
 #     }
@@ -161,9 +161,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 def setDBconnect():
     if DBSERVER == 'atlas':
-        username = urllib.parse.quote_plus('jarvis')
-        password = urllib.parse.quote_plus("#5X7@@7hi6TYnCe")
-        dbclient = MongoClient("mongodb+srv://{}:{}@cluster0.jry7x.mongodb.net/myFirstDatabase?retryWrites=true".format(username, password))    
+        username = urllib.parse.quote_plus('*')
+        password = urllib.parse.quote_plus("*")
+        dbclient = MongoClient("*".format(username, password))    
         print("dbclient connect to atlas") 
     elif DBSERVER == 'localhost':
         dbclient = MongoClient("localhost",27017)
